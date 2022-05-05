@@ -4,28 +4,33 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugs')
 
-  " Themes
-  "Plug 'joshdick/onedark.vim'
-  "Plug 'morhetz/gruvbox'
-  "Plug 'lifepillar/vim-gruvbox8'
-  "Plug 'ayu-theme/ayu-vim'
-  "Plug 'haystackandroid/carbonized'
-  "Plug 'https://github.com/cocopon/iceberg.vim/'
-  "Plug 'NLKNguyen/papercolor-theme'
+  " Themes  
   Plug 'sainnhe/sonokai'
+  "Plug 'ajh17/spacegray.vim'
+  "Plug 'mhartington/oceanic-next'
+  "Plug 'morhetz/gruvbox'
+
+  " Multiple cursoe
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
   " Auto complete
   Plug 'neoclide/coc.nvim'
 
- " statusline
+  " Create dir or new file
+  Plug 'duggiefresh/vim-easydir'
+
+  " statusline
   Plug 'https://github.com/vim-airline/vim-airline'
- 
+  "Plug 'bling/vim-airline'
+
   " Auto pairs for (), [], "", '', {}
   Plug 'jiangmiao/auto-pairs'
 
   " for better syntax highlighting
   Plug 'sheerun/vim-polyglot'
-  "Plug 'uiiaoo/java-syntax.vim'
+  
+  " Vue syntax highlighting
+  Plug 'posva/vim-vue'
 
   " FUZZY FINDER file finder
   Plug 'junegunn/fzf'
@@ -35,8 +40,10 @@ call plug#begin('~/.config/nvim/autoload/plugs')
 
   " Dev icons displays file's icons
   Plug 'ryanoasis/vim-devicons'
+  "Plug 'ryanoasis/nerd-fonts'
+  "Plug 'vim-scripts/vim-webdevicons'
 
- " git tracker plugin
+  "git tracker plugin
   Plug 'airblade/vim-gitgutter'
 
   " indent line
@@ -47,17 +54,20 @@ call plug#begin('~/.config/nvim/autoload/plugs')
   " Vim Terminal
   " Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
   Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-  
-  " JS Auto complete
+
+  " Vim Lorem Ipsum generator
+  Plug 'vim-scripts/loremipsum'
+
+  "JS Auto complete
   " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
   call plug#end()
 
 :colorscheme sonokai
 
-" Setup for indent guides
-"let g:indent_guides_enable_on_vim_startup = 1
 let g:indentLine_enabled = 2
 
+" Setup for vim airline
+let g:airline#extensions#tabline#enabled = 1
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *
