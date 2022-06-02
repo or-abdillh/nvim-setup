@@ -1,11 +1,11 @@
 " !! BETTER NOT TO CHANGE THE ORDER !!
 :set number
 :set relativenumber
-:set autoindent
-:set tabstop=4
-:set shiftwidth=4
+":set autoindent
+:set tabstop=3
+:set shiftwidth=2
 :set smarttab
-:set softtabstop=4
+:set softtabstop=3
 :set mouse=a
 :set nowrap
 

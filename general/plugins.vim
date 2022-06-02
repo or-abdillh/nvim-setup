@@ -4,8 +4,11 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugs')
 
-  " Themes  
-  Plug 'sainnhe/sonokai'
+  " Themes
+  Plug 'dracula/vim', { 'name': 'dracula' }
+  "Plug 'arzg/vim-colors-xcode'
+  "Plug 'sainnhe/sonokai'
+  "Plug 'ghifarit53/tokyonight-vim'
   "Plug 'ajh17/spacegray.vim'
   "Plug 'mhartington/oceanic-next'
   "Plug 'morhetz/gruvbox'
@@ -62,9 +65,18 @@ call plug#begin('~/.config/nvim/autoload/plugs')
   " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
   call plug#end()
 
-:colorscheme sonokai
+" Colorscheme
+set termguicolors
 
-let g:indentLine_enabled = 2
+colorscheme dracula
+
+set encoding=UTF-8
+set conceallevel=1
+
+let g:indentLine_conceallevel= 1
+let g:indentLine_color_term = 210
+let g:indentLine_setConceal = 1
+let g:indentLine_char = "c"
 
 " Setup for vim airline
 let g:airline#extensions#tabline#enabled = 1
